@@ -2,13 +2,15 @@
 \documentclass{beamer}
 
 \usepackage{blindtext}
-
+\usepackage{smartdiagram}
 \usetheme{Execushares}
 
-\title{A New Beamer Theme That Works Well and Looks Great: Execushares}
-\subtitle{A custom modern minimalist Beamer theme designed from scratch}
-\author{Kenton Hamaluik}
-\date{June 1, 2014}
+\title{A Microbe Associated with Sleep Revealed by a Novel Systems Genetic Analysis of the Microbiome in Collaborative Cross Mice}
+\subtitle{Journal club}
+\author{Jason A. Bubier et al.}
+
+
+\date{October 1, 2020}
 
 \setcounter{showSlideNumbers}{1}
 
@@ -19,66 +21,174 @@
 	\frame{\titlepage}
 
 	\begin{frame}
-		\frametitle{Contents}
-		\begin{enumerate}
-			\item Introduction \\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em} The reasoning and background behind this theme}
-			\item Lorem Text  \\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em} Just some Lorem Ipsum for filler}
-			\item Conclusions \\ \textcolor{ExecusharesGrey}{\footnotesize\hspace{1em} Some closing thoughts}
-		\end{enumerate}
+		\frametitle{Overview}
+		\begin{center}
+		\smartdiagram[bubble diagram]{systems \\genetic\\ approach,host\\ genotype, disease-related \\phenotypes, gut microbiome \\composition, gut gene \\expression}
+		\end{center}
+		
 	\end{frame}
 
 	\setcounter{framenumber}{0}
 	\setcounter{showProgressBar}{1}
 	\setcounter{showSlideNumbers}{1}
-	\section{Introduction}
-		\begin{frame}
-			\frametitle{Why Beamer?}
-			\begin{enumerate}
-				\item LaTeX is great!
-				\item Beamer is easy to use!
-				\item Why not?
-			\end{enumerate}
+	\section{Results}
+		\begin{frame}[b]
+			\frametitle{Microbial community composition of incepient CC mice}
+			\begin{figure}
+			\centering
+			\includegraphics[scale=0.3]{SupplementalFig1.pdf}
+			\caption{Cecal microbial profile across mouse samples}
+			\end{figure}
 		\end{frame}
 
 		\begin{frame}
-			\frametitle{Why Custom Themes?}
+			\frametitle{Microbial abundance QTL}
 			\begin{itemize}
-				\item The default Beamer themes are outdated and visually displeasing
-				\item There aren't many Beamer themes readily available online
-				\item Making custom Beamer themes is easy!
+				\item 18 significant microbial abundance QTL
+				\item 1.5 LOD C.I.: 2-24Mb, average of 7.5 Mb
+			\end{itemize}
+		\end{frame}
+		
+		\begin{frame}
+			\frametitle{eQTL in the CC cecum}
+			\begin{itemize}
+				\item Used microarrays for estimates of transcript abundances
+				\item QTL analysis to identify host genomic regions harboring allelic variants that influence the abundance of each probe
+				\item 1641 significant QTL for probes, corresponding to 1513 genes
+				\item 950 loci were \emph{cis}-eQTL, which contain polymorphisms that are proximal to transcript-coding regions \\ $\rightarrow$ useful for identifying expression regulatory mechanisms 
+			\end{itemize}
+		\end{frame}
+		{
+
+		\begin{frame}
+			\frametitle{Genetic correlation of microbial abundance to disease-related traits reveals a microbe associated with sleep}
+			\begin{itemize}
+				\item 122 disease-related behavioral and physiological phenotypes tested
+				\item 45 trait-microbe correlations, 26 exceeded the multiple testing FDR threshold
+				\item 41 contained sleep phenotypes with 10 different microbes, 22 (\emph{q} < 0.05)
+				\item OTU 273 \textit{Odoribacter} correlated with 21 phenotypes comparison-wise and 13 family-wise adjusted
+			\end{itemize}
+		\end{frame}
+		
+		
+		\begin{frame}
+			\frametitle{Genetic regulation of the abundance of \textit{Odoribacter}}
+			\begin{itemize}
+			\item \textit{Micab7}: NZO allele associated with increased abundance \textit{Odoribacter}, is obese and prone to diabetes
+			\item Previous studies: diabetic \textit{db/db} mice and abnormal sleep pattern
+				\begin{block}{Hypothesis}
+				\textit{Odoribacter}, \textit{Lepr} and sleep are connected through a common mechanism. 
+
+				\end{block}
+				We expect an overlap between one or more of the QTL positional candidates and the \textit{Lepr} pathway, and that perturbations of the gut microbiota of \textit{db/db} mice should affect sleep patterns.
+			\end{itemize}
+			
+		\end{frame}
+		
+		\begin{frame}
+		\frametitle{Genetic regulation of the abundance of \textit{Odoribacter}}
+		\begin{center}
+		\smartdiagramset{descriptive items y sep=90pt}
+			\smartdiagram[descriptive diagram]{
+				{Ingenuity Pathway Analysis, 42 positional candidates with Lepr: \textit{Nr2f2} and \textit{Igf1r} as most likely},
+{Causal graphical models G-P, {Infer the direct and the indirect associations among results of the IPA, the leptin pathway, and sleep}},
+}
+
+
+\end{center}
+
+
+
+		\end{frame}
+\begin{frame}
+	\frametitle{Genetic regulation of the abundance of \textit{Odoribacter}}
+	\begin{figure}
+			\includegraphics[scale=1.3]{2E.png}
+			\caption{Inferred network}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}[b]
+\frametitle{Broad-spectrum antibiotic treatment alters sleep patterns in Lepr\textsuperscript{db}Lepr\textsuperscript{db} mice}
+
+ \begin{figure}
+ \centering
+ \includegraphics[scale=0.3]{FigureS4.pdf}
+ \caption{Mice treated with antibiotics from conception. 
+ This showed a genotype-specific effect on sleep architecture.}
+ \end{figure}
+\end{frame}
+
+\begin{frame}[b]
+\frametitle{Broad-spectrum antibiotic treatment alters sleep patterns in Lepr\textsuperscript{db}Lepr\textsuperscript{db} mice}
+
+ \begin{figure}
+ \centering
+ \includegraphics[scale=0.4]{F3.large.jpg}
+ \caption{Mean and SE for the percentage sleep time over a 5-day test, with cyclic patterns characterized on the right by an FFT of the mean sleep percentage time series.}
+ \end{figure}
+\end{frame}
+
+
+
+	\section{Conclusion}
+		\begin{frame}
+			\frametitle{Conclusion}
+			\centering
+			\begin{itemize}
+			\item They show for the first time a relationship between abundance of a specific microbe and sleep
+			\begin{itemize}
+			\item OTU273 \textit{Odoribacter} abundance is associated with \textit{Micab7} QTL and was correlated with multiple sleep phenotype measures
+			\item Genomic network analyses revealed that the primary candidate gene for the QTL is \textit{Igf1r}
+			\item Perturbation of this pathway in the db/db Lepr mutant mouse is associated with abnormal phenotype and an elevated abundance of \textit{Odoribacter} (among other microbes)
+			\item Both of these phenomena can be restored by antibiotic treatment 
+			\end{itemize}
 			\end{itemize}
 		\end{frame}
 
-	\section{Lorem Ipsum}
 		\begin{frame}
-			\frametitle{Lorem 1}
-			\blindtext
-		\end{frame}
-
-		\begin{frame}
-			\frametitle{Lorem 2}
-			\blindtext
-		\end{frame}
-
-		\begin{frame}
-			\frametitle{Lorem 3}
-			\blindtext
-		\end{frame}
-
-	\section{Conclusions}
-		\begin{frame}
-			\frametitle{Closing Thoughts}
+			\frametitle{Outlook}
 			\begin{itemize}
-				\item Woo, Beamer!
+			\item They have not yet demonstrated that \textit{Igf1r} variation is i=the specific causal regulator 
+			\item whether the locus is associated with abnormal Odoribacter abundance
+			\item whether inoculation of \textit{Lepr} or \textit{Igf1r} mice with \textit{Odoribacter} and its metabolites influences sleep
 			\end{itemize}
 		\end{frame}
-	
+
+
 	\appendix
+	
 	\backupbegin
-	  \begin{frame}
-	    \frametitle{Backup slide 1}
-	    \blindtext
+	  \begin{frame}[b]
+	    \frametitle{SV35}
+	    \begin{figure}
+	    \includegraphics[scale=0.5]{SV35-P-chr7_bin1_region_plot.pdf}
+	    \end{figure}
 	  \end{frame}
+	  
+	  	  \begin{frame}[b]
+	    \frametitle{SV33}
+	    \begin{figure}
+	    \includegraphics[scale=0.5]{SV33-add.P-chr7_bin1_region_plot.pdf}
+	    \end{figure}
+	  \end{frame}
+	  
+	  	  	  \begin{frame}[b]
+	    \frametitle{SV33}
+	    \begin{figure}
+	    \includegraphics[scale=0.4]{SV33_marker_UNC13083565_RNA.pdf}
+	    \end{figure}
+	  \end{frame}
+	  
+	  	  \begin{frame}[b]
+	    \frametitle{Genus Paraprevotella}
+	    \begin{figure}
+	    \includegraphics[scale=0.4]{G_Paraprevotella_marker_UNC13034282_RNA.pdf}
+	    \end{figure}
+	  \end{frame}
+
+
 	\backupend
 
 \end{document}
